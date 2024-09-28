@@ -1,5 +1,10 @@
 # Employee Management System
 
+## DEMO
+
+    ![demo](./test.mkv)
+
+
 ## Overview
 
 The Employee Management System is a full-stack web application that allows users to view and manage employee records. Users can add, edit, view, and delete employee data using this platform. It includes a backend API for managing employee data and a responsive frontend for interacting with the system.
