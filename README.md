@@ -47,7 +47,7 @@ The project is divided into two main parts:
 
 - **Frontend** (React + TypeScript)
 - **Backend** (Node.js + Express)
-
+```
 .
 ├── backend/
 │   ├── controllers/
@@ -62,6 +62,7 @@ The project is divided into two main parts:
 │   │   ├── index.tsx
 │   └── package.json
 └── README.md
+```
 
 ## Key Components
 
@@ -79,10 +80,10 @@ The project is divided into two main parts:
 
 ### Fetch All Employees
 
-**Request**: `GET /api/v1/employees`
+    **Request**: `GET /api/v1/employees`
 
 ```json
-[
+
     {
         "employeeId": 1,
         "employeeName": "John Doe",
@@ -94,11 +95,11 @@ The project is divided into two main parts:
         "employeeImage": "https://via.placeholder.com/100"
     },
     ...
-]
+
 
 ### Add New employees
 
-**Request**: `POST /api/v1/employees`
+    **Request**: `POST /api/v1/employees`
 ```json
     {
     "employeeName": "Jane Doe",
