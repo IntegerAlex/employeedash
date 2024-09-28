@@ -82,7 +82,7 @@ The project is divided into two main parts:
 
     **Request**: `GET /api/v1/employees`
 
-```json
+    ```json
 
     {
         "employeeId": 1,
@@ -100,7 +100,7 @@ The project is divided into two main parts:
 ### Add New employees
 
     **Request**: `POST /api/v1/employees`
-```json
+    ```json
     {
     "employeeName": "Jane Doe",
     "employeeEmail": "jane@example.com",
@@ -114,9 +114,9 @@ The project is divided into two main parts:
 
 ### Update Employee details
     
-**Request**: `PUT /api/v1/employees/:id`
+    **Request**: `PUT /api/v1/employees/:id`
 
-```json
+    ```json
 {
     "employeeName": "John Smith",
     "employeeEmail": "johnsmith@example.com",
@@ -130,5 +130,5 @@ The project is divided into two main parts:
 
 ### Delete Employee
 
-**Request**: `DELETE /api/v1/employee/:id`
+    **Request**: `DELETE /api/v1/employee/:id`
 
