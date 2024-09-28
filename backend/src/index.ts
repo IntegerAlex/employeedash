@@ -11,7 +11,7 @@ server.get('/api/v1/employees', employeeController.getAllEmployees);
 server.get('/api/v1/employee/:id', employeeController.getEmployeeById);
 server.post('/api/v1/employee', employeeController.addEmployee);
 server.put('/api/v1/employee/:id', employeeController.updateEmployee);
-server.delete('/api/v1/employee', employeeController.deleteEmployee);
+server.delete('/api/v1/employee/:id', employeeController.deleteEmployee);
 
 
 server.listen(8080, () => {

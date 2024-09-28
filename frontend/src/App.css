@@ -1,62 +1,132 @@
+/* Container styles */
 .App {
   display: flex;
+  flex-wrap: wrap; /* Allows the cards to wrap to the next line if they don't fit */
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f4f7fc;
+  min-height: 100vh;
+  background-color: #1a1a1a; /* Dark background */
   font-family: 'Arial', sans-serif;
+  padding: 20px; /* Ensures space on smaller screens */
+  box-sizing: border-box;
+  gap: 20px; /* Adds space between cards */
 }
 
+/* Card styles */
 .card {
-  background-color: white;
+  background-color: #2b2b2b; /* Dark card background */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More prominent shadow for depth */
+  width: calc(100% - 40px); /* Makes sure it never goes out of bounds */
+  max-width: 400px; /* Preferred width */
   padding: 20px;
   text-align: center;
+  color: #e0e0e0; /* Light text color for contrast */
+  transition: transform 0.3s ease; /* Adds hover effect */
+  box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+/* Card header styles */
 .card-header {
   margin-bottom: 15px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 1px solid #3a3a3a; /* Subtle divider */
   padding-bottom: 10px;
 }
 
 h2 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: #ffffff; /* White text for headers */
 }
 
 .designation {
   font-size: 16px;
-  color: #888;
+  color: #bbbbbb; /* Gray text for designations */
   margin-top: 5px;
 }
 
 .employee-id {
   font-size: 14px;
-  color: #777;
+  color: #999999; /* Slightly darker gray for less emphasis */
   margin-top: 5px;
 }
 
+/* Image styles */
 .employee-image {
   border-radius: 50%;
   width: 100px;
   height: 100px;
   object-fit: cover;
   margin-bottom: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow for image */
 }
 
+/* Body text styles */
 .card-body p {
   margin: 10px 0;
   font-size: 18px;
-  color: #555;
+  color: #cccccc; /* Light gray text */
 }
 
 strong {
-  color: #333;
+  color: #ffffff; /* White text for bold emphasis */
+}
+
+/* Button styles */
+.btn {
+  background-color: #4caf50; /* Gjreen button for actions */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.del-btn {
+	padding:10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	font-size: 16px;
+	margin-top: 15px;
+  background-color: #f44336; /* Red button for delete action */
+}
+
+.btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .App {
+    flex-direction: column; /* Stack cards vertically on small screens */
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .employee-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .card-body p {
+    font-size: 16px;
+  }
 }
 

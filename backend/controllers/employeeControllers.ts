@@ -1,10 +1,10 @@
 import * as express from 'express';
 const { MongoClient , ServerApiVersion } = require('mongodb');
+require('dotenv').config();
 // or as an es module:
 // import { MongoClient } from 'mongodb'
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-
-const url = 
+const url = process.env.MONGOURL;
 const client = new MongoClient(url, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -106,7 +106,7 @@ class EmployeeController {
 
 
 	deleteEmployee = async (req: express.Request, res: express.Response) => {
-		const employeeId = req.body.employeeId;
+		const employeeId = req.params.id;
 		if(employeeId) {
 			const dbCollection = await db();
 			await dbCollection.deleteOne({employeeId: employeeId});
